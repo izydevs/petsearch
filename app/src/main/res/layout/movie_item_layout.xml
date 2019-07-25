@@ -69,11 +69,11 @@
         android:background="@drawable/circular_green_back"
         android:fontFamily="sans-serif"
         android:maxLines="3"
-        android:paddingStart="@dimen/sixteen_dp"
-        android:paddingEnd="@dimen/sixteen_dp"
+        android:paddingStart="@dimen/twelve_dp"
+        android:paddingEnd="@dimen/twelve_dp"
         android:text="@string/rate_text"
         android:textColor="@color/white"
-        android:textSize="@dimen/twenty_sp"
+        android:textSize="@dimen/eighteen_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/poster_iv" />
 
@@ -101,11 +101,11 @@
         android:background="@drawable/circular_red_back"
         android:fontFamily="sans-serif"
         android:maxLines="3"
-        android:paddingStart="@dimen/sixteen_dp"
-        android:paddingEnd="@dimen/sixteen_dp"
+        android:paddingStart="@dimen/twelve_dp"
+        android:paddingEnd="@dimen/twelve_dp"
         android:text="@string/lang_text"
         android:textColor="@color/white"
-        android:textSize="@dimen/twenty_sp"
+        android:textSize="@dimen/sixteen_sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

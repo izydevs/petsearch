@@ -1,4 +1,4 @@
-package com.amit.peatsearch.Model;
+package com.amit.petsearch.Model;
 
 import java.util.List;
 

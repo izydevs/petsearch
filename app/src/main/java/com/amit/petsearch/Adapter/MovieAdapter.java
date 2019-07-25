@@ -1,4 +1,4 @@
-package com.amit.peatsearch.Adapter;
+package com.amit.petsearch.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.amit.peatsearch.Model.Movie;
-import com.amit.peatsearch.MovieDetailsActivity;
-import com.amit.peatsearch.R;
-import com.amit.peatsearch.Utils.Utils;
+import com.amit.petsearch.Model.Movie;
+import com.amit.petsearch.MovieDetailsActivity;
+import com.amit.petsearch.R;
+import com.amit.petsearch.Utils.Utils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
@@ -39,12 +39,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
         Movie movie = myList.get(i);
-//        Glide.with(context).load(Utils.URL + movie.getPoster_path()).into(myViewHolder.posterImage);
         setPosterImage(myViewHolder.posterImage, Utils.POSTER_URL+movie.getPoster_path());
         myViewHolder.title.setText(movie.getTitle());
         myViewHolder.summary.setText(movie.getOverview());
         myViewHolder.rating.setText(String.valueOf(movie.getVote_average()));
-        myViewHolder.releaseDate.setText(movie.getRelease_date());
+        myViewHolder.releaseDate.setText(Utils.convertTimeFormat(movie.getRelease_date()));
         myViewHolder.language.setText(movie.getOriginal_language().toUpperCase());
 
     }
@@ -81,7 +80,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         @Override
         public void onClick(View view) {
             Intent intent = new Intent(context, MovieDetailsActivity.class);
-            intent.putExtra("movie_details",myList.get(getAdapterPosition()));
+            intent.putExtra("movie_id",String.valueOf(myList.get(getAdapterPosition()).getId()));
             context.startActivity(intent);
         }
     }

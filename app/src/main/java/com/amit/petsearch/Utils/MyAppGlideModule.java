@@ -1,4 +1,4 @@
-package com.amit.peatsearch.Utils;
+package com.amit.petsearch.Utils;
 
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;

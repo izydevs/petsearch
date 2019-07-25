@@ -1,4 +1,4 @@
-package com.amit.peatsearch.Model;
+package com.amit.petsearch.Model;
 
 import java.io.Serializable;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class MovieDetails implements Serializable {
     private boolean adult;
     private String backdrop_path;
-    private List<BelongsToCollection> belongs_to_collection;
+    private BelongsToCollection belongs_to_collection;
     private long budget;
     private List<GenresData> genres;
     private String homepage;
@@ -45,11 +45,11 @@ public class MovieDetails implements Serializable {
         this.backdrop_path = backdrop_path;
     }
 
-    public List<BelongsToCollection> getBelongs_to_collection() {
+    public BelongsToCollection getBelongs_to_collection() {
         return belongs_to_collection;
     }
 
-    public void setBelongs_to_collection(List<BelongsToCollection> belongs_to_collection) {
+    public void setBelongs_to_collection(BelongsToCollection belongs_to_collection) {
         this.belongs_to_collection = belongs_to_collection;
     }
 
@@ -222,16 +222,16 @@ public class MovieDetails implements Serializable {
     }
 
     public class BelongsToCollection {
-        public int id;
+        public long id;
         public String name;
         public String poster_path;
         public String backdrop_path;
 
-        public int getId() {
+        public long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(long id) {
             this.id = id;
         }
 
@@ -261,14 +261,14 @@ public class MovieDetails implements Serializable {
     }
 
     public class GenresData {
-        public int id;
+        public long id;
         public String name;
 
-        public int getId() {
+        public long getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(long id) {
             this.id = id;
         }
 
